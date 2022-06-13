@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Domain"
+    "\\Tests",
+    "\\Tests\\Entities"
   ],
-  "SelectedNode": "\\Domain\\Domain.csproj",
+  "SelectedNode": "\\Domain",
   "PreviewInSolutionExplorer": false
 }

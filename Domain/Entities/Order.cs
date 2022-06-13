@@ -5,7 +5,7 @@ namespace Domain.Entities
 {
     public class Order : Entity
     {
-        public Order(Customer customer, decimal deliveryFree, Discount discount)
+        public Order(Customer customer, decimal deliveryFree, Discount? discount)
         {
 
             AddNotifications(
@@ -16,10 +16,11 @@ namespace Domain.Entities
 
             Customer = customer;
             Date = DateTime.Now;
-            Number = Guid.NewGuid().ToString().Substring(0,8);
-            Status = EOrderStatus.WaitingPayment;            
+            Number = Guid.NewGuid().ToString().Substring(0, 8);
+            Status = EOrderStatus.WaitingPayment;
             DeliveryFree = deliveryFree;
             Discount = discount;
+            Items = new List<OrderItem>();
         }
 
         public Customer Customer { get; private set; }
@@ -27,7 +28,7 @@ namespace Domain.Entities
         public string Number { get; private set; }
         public IList<OrderItem> Items { get; private set; }
         public decimal DeliveryFree { get; private set; }
-        public Discount Discount { get; private set; }          
+        public Discount? Discount { get; private set; }
         public EOrderStatus Status { get; private set; }
 
         public void AddItem(Product product, int quantity)
@@ -36,9 +37,6 @@ namespace Domain.Entities
             if (item.Valid)
             {
                 Items.Add(item);
-            } else
-            {
-                AddNotifications(item.Notifications);
             }
         }
 
@@ -58,7 +56,7 @@ namespace Domain.Entities
 
         public void Pay(decimal amount)
         {
-            if(amount == Total())
+            if (amount == Total())
             {
                 Status = EOrderStatus.Paid;
             }

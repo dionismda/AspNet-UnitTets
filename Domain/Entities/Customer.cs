@@ -6,14 +6,6 @@ namespace Domain.Entities
     {
         public Customer(string name, string email)
         {
-
-            AddNotifications(
-                new Contract()
-                        .Requires()
-                        .IsNotNull(name, "Name", "Name not is nullable")
-                        .IsEmail(email, "Email", "Invalid e-mail")                                                
-            );
-
             Name = name;
             Email = email;
         }

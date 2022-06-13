@@ -1,0 +1,12 @@
+F:\Balta\AspNet+UnitTest\Domain\bin\Debug\net6.0\Domain.deps.json
+F:\Balta\AspNet+UnitTest\Domain\bin\Debug\net6.0\Domain.dll
+F:\Balta\AspNet+UnitTest\Domain\bin\Debug\net6.0\ref\Domain.dll
+F:\Balta\AspNet+UnitTest\Domain\bin\Debug\net6.0\Domain.pdb
+F:\Balta\AspNet+UnitTest\Domain\obj\Debug\net6.0\Domain.csproj.AssemblyReference.cache
+F:\Balta\AspNet+UnitTest\Domain\obj\Debug\net6.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+F:\Balta\AspNet+UnitTest\Domain\obj\Debug\net6.0\Domain.AssemblyInfoInputs.cache
+F:\Balta\AspNet+UnitTest\Domain\obj\Debug\net6.0\Domain.AssemblyInfo.cs
+F:\Balta\AspNet+UnitTest\Domain\obj\Debug\net6.0\Domain.csproj.CoreCompileInputs.cache
+F:\Balta\AspNet+UnitTest\Domain\obj\Debug\net6.0\Domain.dll
+F:\Balta\AspNet+UnitTest\Domain\obj\Debug\net6.0\ref\Domain.dll
+F:\Balta\AspNet+UnitTest\Domain\obj\Debug\net6.0\Domain.pdb

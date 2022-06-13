@@ -9,13 +9,13 @@ namespace Domain.Entities
 
             AddNotifications(
                 new Contract()
-                        .Requires()
-                        .IsNotNull(product, "Product", "Invalid Product")
-                        .IsGreaterThan(quantity, 0, "Quantity", "Quantity must be greater than 0")
+                    .Requires()
+                    .IsNotNull(product, "Product", "Invalid Product")
+                    .IsGreaterThan(quantity, 0, "Quantity", "A quantidade deve ser maior que zero")
             );
 
             Product = product;
-            Price = product.Price;
+            Price = Product != null ? product.Price : 0;
             Quantity = quantity;
         }
 
