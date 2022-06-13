@@ -1,4 +1,5 @@
 ﻿using Domain.Enums;
+using Flunt.Validations;
 
 namespace Domain.Entities
 {
@@ -6,6 +7,13 @@ namespace Domain.Entities
     {
         public Order(Customer customer, decimal deliveryFree, Discount discount)
         {
+
+            AddNotifications(
+                new Contract()
+                        .Requires()
+                        .IsNotNull(customer, "Customer", "Customer Invalid")
+            );
+
             Customer = customer;
             Date = DateTime.Now;
             Number = Guid.NewGuid().ToString().Substring(0,8);
@@ -24,8 +32,14 @@ namespace Domain.Entities
 
         public void AddItem(Product product, int quantity)
         {
-            var item = new OrderItem(product, quantity);
-            Items.Add(item);
+            OrderItem item = new OrderItem(product, quantity);
+            if (item.Valid)
+            {
+                Items.Add(item);
+            } else
+            {
+                AddNotifications(item.Notifications);
+            }
         }
 
         public decimal Total()

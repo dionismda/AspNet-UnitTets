@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "otJqwKCnb0LbKqxDvbFY5iXkuY5NVGyLBX3/E+6dq26KLvIVPYEYM3cKfZzsTQaI5L9q6hfixa9T0HuuKGJ/lA==",
+  "dgSpecHash": "7ID811+z/oVm0vxe7tyhLAkRtIeZhj0W8YFdsy8Mme+/OVIWuNzdJJjGNgRBHSBPvJIzuw7wNh0Y3EMu53Xu7g==",
   "success": true,
   "projectFilePath": "F:\\Balta\\AspNet+UnitTest\\Domain\\Domain.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\programacao06\\.nuget\\packages\\flunt\\1.0.3\\flunt.1.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

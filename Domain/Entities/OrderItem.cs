@@ -1,9 +1,19 @@
-﻿namespace Domain.Entities
+﻿using Flunt.Validations;
+
+namespace Domain.Entities
 {
     public class OrderItem : Entity
     {
         public OrderItem(Product product, int quantity)
         {
+
+            AddNotifications(
+                new Contract()
+                        .Requires()
+                        .IsNotNull(product, "Product", "Invalid Product")
+                        .IsGreaterThan(quantity, 0, "Quantity", "Quantity must be greater than 0")
+            );
+
             Product = product;
             Price = product.Price;
             Quantity = quantity;
