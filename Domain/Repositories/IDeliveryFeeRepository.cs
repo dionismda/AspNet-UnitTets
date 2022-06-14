@@ -1,6 +1,6 @@
 ﻿namespace Domain.Repositories
 {
-    public interface IDeliveryFreeRepository
+    public interface IDeliveryFeeRepository
     {
         decimal Get(string zipcode);
     }
