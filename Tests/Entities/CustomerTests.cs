@@ -7,7 +7,7 @@ namespace Tests.Entities
     public class CustomerTests
     {
         [TestMethod]
-        [TestCategory("Domain/Customer")]
+        [TestCategory("Domain/Entities/Customer")]
         public void Criado_um_customer_deve_ser_valido()
         {
             Customer customer = new Customer("CustomerTests", "customer@teste.com.br");
@@ -15,7 +15,7 @@ namespace Tests.Entities
         }
 
         [TestMethod]
-        [TestCategory("Domain/Customer")]
+        [TestCategory("Domain/Entities/Customer")]
         public void Criado_um_customer_sem_informar_o_nome_deve_ser_invalido()
         {
             Customer customer = new Customer(null, "customer@teste.com.br");
@@ -23,10 +23,10 @@ namespace Tests.Entities
         }
 
         [TestMethod]
-        [TestCategory("Domain/Customer")]
+        [TestCategory("Domain/Entities/Customer")]
         public void Criado_um_customer_com_email_errado_deve_ser_invalido()
         {
-            Customer customer = new Customer(null, "naoeumeemail");
+            Customer customer = new Customer("CustomerTests", "naoeumeemail");
             Assert.AreEqual(customer.Valid, false);
         }
 
